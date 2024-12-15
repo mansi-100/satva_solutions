@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link</title>
+</head>
+<style>
+    a{
+        color: blue;
+    }
+    a:visited{
+        color: rgb(255, 0, 0);
+    }
+    a:hover{
+        color:rgb(34, 255, 0);
+    }
+    a:active{
+        color: rgb(0, 0, 0);
+    }
+    #m{
+        background-color: red;
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+</style>
+<body>
+<center>
+    <p><a href="#m">jump to image button</a></p>
+    <h3>this is basic link example</h3>
+    <a href="https://www.google.com">google</a><br>
+    <!--with title and target attr-->
+    <a href="https://www.google.com" target="_blank" title="_blank title">google with blank title and target</a><br>
+    <a href="https://www.google.com" target="_parent" title="_parent title">google with parent target and title </a><br>
+    <a href="https://www.google.com" target="_self" title="_self title">google with self target and title </a><br>
+    <a href="https://www.google.com" target="_top" title="_top title">google with top target and title </a><br>
+
+    <p><a href="file:///C:/Users/mansi%20nayak/Desktop/satva_solutions/tasks/html/demo/relative.html">relative url</a></p> <!--  Link to a page located in the html folder on the current web site:  -->
+    <a href="https://www.google.com" >absolute url</a><br><br>
+
+    <a href="https://th.bing.com/th/id/OIP.z9DgCgl3z9jhbiJDMuwsOAHaEK?rs=1&pid=ImgDetMain"><img src="https://th.bing.com/th/id/OIP.Ekodt74sE9k22Kcb1D_9XwHaFj?rs=1&pid=ImgDetMain"></a>
+    <br><a href="mailto:mansinayak170@gmail.com">mail linked</a><br><br><br><br>
+    <a href="https://www.google.com" id="m"> link as a button</a><br><br><br><br>
+    <button onclick="document.write('welcome')">welcome</button>
+
+
+</center>
+</body>
+</html>
