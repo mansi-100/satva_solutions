@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h3>basic form example</h3>
+    <form action="file:///C:/Users/mansi%20nayak/Desktop/satva_solutions/clone/satva_solutions/tasks/html/save.html" target="_parent" autocomplete="on" novalidate
+    oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+       <fieldset>
+        <legend>Login</legend>
+         <label for="fname">First name :</label><br>
+            <input type="text" name="fname" id="fname" value="mansi"><br><br>
+
+        <label for="pass">Password :</label><br>
+        <input type="password" name="pass" id="pass" value="123"><br>
+        </fieldset><br>
+        <fieldset>
+            <legend>Personal information</legend>
+            <label for="telephone">Enter your telephone: </label><br>
+            <input type="tel" id="telephone" pattern="[0-9]{10}" required><br><br>
+            
+            <label for="date">Enter your birthdate: </label><br>
+            <input type="datetime-local" name="date" id="date" min="2023-01-01" max="2024-01-01">
+
+            <!-- <input type="date" name="date" id="date" min="2023-01-01" max="2024-01-01"> -->
+            <p>choose your fav food</p>
+            <input type="radio" id="punjabi" name="fav" value="HTML">
+            <label for="punjabi">punjabi</label><br>
+            
+            <input type="radio" name="fav" id="dabeli">
+            <label for="dabeli">dabeli</label><br>
+
+            <p>choose your fav movies :</p>
+            <input type="checkbox" id="rockstar" name="movie[]" value="rockstar">
+            <label for="rockstar">rockstar</label><br>
+
+            <input type="checkbox" id="bindu" name="bindu" value="bindu">
+            <label for="bindu">meri pyaari bindu</label><br>
+
+            <input type="checkbox" id="fly" name="fly" value="fly">
+            <label for="fly to you">fly to you</label><br><br>
+
+            <label for="country">choose your country :</label>
+            <select name="country" id="country" size="2">
+                <option>select country</option>
+                <option value="india">India</option>
+                <option value="uk">UK</option> <!--selected attribute-->
+                <option value="USA">USA</option>
+
+            </select><br><br>
+
+            <label for="address">choose your country :</label>
+
+            <textarea name="address" id="address" rows="5" cols="100" style="width: 200px;height: 100px;">enter your address here     
+
+            </textarea>
+            <p>enter your fav browser name :</p>
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="firefox"></option>
+                <option value="safari"></option>
+                <option value="chrome"></option>
+            </datalist>
+        </fieldset><br>
+            <input type="number" id="a" value="50">
+            <input type="number" id="b" value="100">
+            <output name="result" for="a b"></output>
+            <br><br>
+        <button type="button" onclick="alert('welcome user')">Click me</button>
+        <input type="submit" value="add">
+
+        <p>custom attribute :</p>
+        
+    </form>
+</body>
+</html>
