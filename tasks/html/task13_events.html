@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events demo</title>
+</head>
+<script>
+    function afterprint()
+    {
+        alert("thanks for print");
+    }
+    function beforeprint(){
+        alert("printing begin");
+    }
+    function beforeunload(){
+        alert("you are going to load");
+    }
+    function onerror1(){
+        alert("sorry image not found");
+    }
+    function onblur1(){
+        alert("you lost your focus");
+    } 
+    function change(){
+        alert("you changed val");
+    }        
+    function focus1(){
+        alert("you achived focus");
+    }
+    function onkeypress1(){
+        alert("on key press ");
+    }
+    function onhov(){
+        alert("mouse hovered");
+    }
+    
+    
+    </script>
+<body onbeforeunload="return beforeunload()" onafterprint="afterprint()" onbeforeprint="beforeprint()">
+    
+    <p>first tag is for afterprint so just press ctrl+p then cancel to see output</p>
+    <a href="https://www.google.com">google</a>
+    <img src="image.gif" onerror="onerror1()">
+    <br><input type="text" onmouseover="onhov()" onkeypress="onkeypress1()" name="fname" id="fname"  onchange="change()" onblur="onblur1()">
+
+</body>
+</html>
