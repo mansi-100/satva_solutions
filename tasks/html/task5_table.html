@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table example</title>
+</head>
+<style>
+    table{
+        border-radius:10px;
+        border: 20px solid black;
+        max-height: 2px !important;
+        /* height: 150%; */
+        /* border-spacing: 10px; */
+        
+    }
+    th{
+        text-align: center;
+        border: 5px outset red;
+
+        /* border: 5px dotted red; */
+    }
+    td{
+        padding-top: 20px;
+        /* border: 5px dashed pink; */
+    }
+    tr:nth-child(even){
+        background-color: rgb(30, 252, 241);
+    }
+    td:nth-child(odd){
+        /* background-color: yellow; */
+    }
+    tr:hover{
+        background-color: violet;
+    }
+</style>
+<body>
+    <h3>basic table</h3>
+    <table border="2" style="width:300px;">
+        <colgroup>
+            <!-- <col span="1" style="background-color: yellowgreen;"> -->
+            <!-- <col span="2">
+             <col span="3" style="visibility: collapse"> -->
+
+        </colgroup>
+        <caption>employee data</caption>
+        <tr><!--this is called table header -->
+            <th>id</th>
+            <th>name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>mansi</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td rowspan="2">krishna</td>
+        </tr>
+       
+        <tr>
+            <td style="text-align: left;font-weight: bold;text-indent:0px;">no data</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">4</td>
+            <!-- <td>ganesha</td> -->
+        </tr>
+    </table><br><br>
+    <table border="8" style="height:2px !important;">
+        <tr>
+            <th colspan="3">2025</th>
+        </tr>
+        <tr>
+            <td>1.1</td>
+            <td>1.2</td>
+            <td>1.3</td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2">FIESTA</td>
+            <td>2.1</td>
+        </tr>
+        <tr>
+            <td>2.2</td>
+        </tr>
+        <tr>
+            <td>3.1</td>
+            <td>3.2</td>
+            <td>3.3</td>
+        </tr>
+    </table>
+   
+</body>
+</html>
