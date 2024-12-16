@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list in html</title>
+</head>
+<style>
+    li:hover{
+        background-color: red;
+    }
+    /* li,a{
+        display: block;
+    } */
+    #ul{
+        list-style-type: none;
+        /* overflow: hidden; */
+        background-color: black;
+        float: left;
+        border:2px solid black;
+        color: white;
+        padding: 16px;
+    }
+    a{
+        color: white;
+    }
+    #li{
+        float: left;
+        padding: 20px;
+    }
+
+</style>
+<body>
+    <h3>unordered list of html</h3>
+    <ul style="list-style-type: circle;">
+        <li>coffee</li>
+        <li>tea</li>
+            <ul style="list-style-type: square;">
+                <li>nestle</li>
+                <li>other brand</li>
+            </ul>
+        <li>milk</li>
+    </ul>
+    <h3>ordered list of html</h3>
+    <ol type="1" start="50">
+        <li>cofee</li>
+        <li>tea</li>
+        <ol type="I">
+            <li>Black Tea</li>
+            <li>Green tea</li>
+        </ol>
+        <li>milk</li>
+    </ol>
+    <h3>description list</h3>
+    <dl>
+        <dt>drinks :</dt>
+            <dd>-pepsi</dd>
+            <dd>-thumsup</dd>
+            <dd>-fanta</dd>
+    </dl><br>
+    <h3>navigation menu using unordered list</h3>
+    <ul id="ul">
+        <li id="li"><a href="#">home</a></li>
+        <li id="li"><a href="about_us">about us</a></li>
+        <li id="li"><a href="contact_us">contact us</a></li>
+        <li id="li"><a href="register">register</a></li>
+        <li id="li"><a href="login">login</a></li>
+    </ul>
+</body>
+</html>
