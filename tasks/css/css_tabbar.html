@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabbar example</title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+    <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-btn" onclick="ln()">london</button>
+        <button class="w3-bar-item w3-btn" onclick="p()">paris</button>
+    </div>
+
+    <div id="ld"  style="display: none;">
+        <p>this is london</p>
+    </div>
+
+    <div id="pr"  style="display: none;">
+        <p>this is paris</p>
+    </div>
+    <script>
+        function ln(){
+            // alert("click");
+            var l=document.getElementById("ld");
+            ld.style.display="block";
+            var pp=document.getElementById("pr");
+            pp.style.display="none";
+            
+        }
+        function p(){
+            var pp=document.getElementById("pr");
+            var l=document.getElementById("ld");
+            ld.style.display="none";
+            pp.style.display="block";
+        }
+    </script>
+</body>
+</html>

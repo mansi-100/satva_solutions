@@ -1,0 +1,49 @@
+<!--this code of w3 school not working in ownp pc
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators_active
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabbar second example</title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+    <div class="w3-bar w3-black">
+        <button class="w3-btn w3-bar-item tablink w3-red" onclick="fn(event,'london')">london</button>
+        <button class="w3-btn w3-bar-item tablink" onclick="fn(event,'paris')">paris</button>
+        <button class="w3-btn w3-bar-item tablink" onclick="fn(event,'china')">china</button>
+
+    </div>
+
+    <div id="lndn" class="city" style="display:none">
+        <p>this is london</p>
+    </div>
+
+    <div id="pris" class="city" style="display:none">
+        <p>this is paris</p>
+    </div>
+
+    <div id="chin" class="city" style="display:none">
+        <p>this is china</p>
+    </div>
+<script>
+   function fn(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+</body>
+</html>

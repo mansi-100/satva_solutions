@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css modal</title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+    <button class="w3-btn w3-black" onclick="document.getElementById('id1').style.display='block'">open modal</button>
+    <div id="id1" class="w3-container w3-modal" style="display: none;">
+        <div class="w3-modal-content w3-animate-top">
+            <span class="w3-topright w3-button" onclick="document.getElementById('id1').style.display='none'">&times;</span><br>
+            <p class="w3-green">this is text</p>
+            <p>this is txt2</p>
+        </div>
+        </div>
+</body>
+</html>
