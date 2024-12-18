@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter list</title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+   
+</style>
+<body>
+    <div class="w3-container">
+       <p> Enter your name to search : </p>
+        <input id="val" type="text" class="w3-input" placeholder="enter name" onkeyup="myfun()">
+    
+    <ul id="list" style="list-style-type: none;">
+        <li>adle</li>
+        <li>angles</li>
+        <li>billy</li>
+        <li>canny</li>
+        <li>daisy</li>
+    </ul>
+    <div class="w3-dropdown-click">
+        <button class="w3-btn  w3-black" onclick="showw()">click me</button>
+        <div class="w3-dropdown-content w3-hide w3-bar-block" id="d1">
+            <input id="val2" type="text" class="w3-input" onkeyup="myfun2()" placeholder="enter name ">
+            <a href="#" class="w3-bar-item w3-button">first</a>
+            <a href="#" class="w3-bar-item w3-button">sec</a>
+            <a href="#" class="w3-bar-item w3-button">third</a>
+            <a href="#" class="w3-bar-item w3-button">four</a>
+
+        </div>
+</div>
+    </div>
+    <script>
+        function myfun(){
+            var val=document.getElementById("val").value.toLowerCase();
+            var list=document.getElementById("list").children;
+            for(let i=0;i<list.length;i++){
+                const row=list[i];
+                const text=row.textContent.toLowerCase();
+                if(text.includes(val)){
+                    row.style.display="";
+                }else{
+                    row.style.display='none';
+                }
+            }
+        }
+        function showw(){
+            // alert("c");
+            var x=document.getElementById("d1");
+            x.classList.toggle("w3-show");
+             x.classList.toggle("w3-hide");
+            // x.style.display='block';
+
+        }
+        function myfun2(){
+            var val2=document.getElementById("val2").value.toLowerCase();
+            var data=document.getElementById("d1").getElementsByTagName("a");
+            for(let i=0;i<data.length;i++){
+                const link=data[i];
+                const text=link.textContent.toLowerCase();
+                if(text.includes(val2)){
+                    link.style.display="";
+                }else{
+                    link.style.display='none';
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
