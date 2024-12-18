@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+  <div class="w3-container">
+    <h2>Search Table</h2>
+    <input id="w3-search" type="text" placeholder="Search...">
+    <table id="table">
+      <tr><td>John</td><td>USA</td></tr>
+      <tr><td>Jane</td><td>Canada</td></tr>
+      <tr><td>Bob</td><td>Mexico</td></tr>
+    </table>
+  </div>
+  <script>
+    const searchInput = document.getElementById('search');
+    const table = document.getElementById('table');
+    
+    searchInput.addEventListener('input', () => {
+      const filter = searchInput.value.toLowerCase();
+      const rows = table.rows;
+      
+      for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        const text = row.textContent.toLowerCase();
+        
+        if (text.includes(filter)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
