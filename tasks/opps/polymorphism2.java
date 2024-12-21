@@ -1,7 +1,7 @@
 //dynamic operator overloading - method overriding
 //atm machine is best example
 class shape{
-    public void draw(){
+   public void draw(){
         System.out.println("shape draw");
     }
 }
