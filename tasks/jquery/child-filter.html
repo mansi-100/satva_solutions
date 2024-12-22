@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child  filter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h3>content based filter</h3>
+    <p>hello morning</p>
+    <p>welcome to this amazing page</p>
+    <p>do you like blogging?</p>
+    <!-- <p></p> it will not work with p tag because it contains invisible whitespace or something-->
+    <ul>
+        <li>red</li>
+        <!-- <ul>
+            <li>hi</li>
+        </ul> -->
+        <li>green</li>
+        <li>pink</li>
+        <li><a href="#">hello</a></li>
+        <!-- <li><a href="#">wc</a></li>
+        <ul>
+            <li>hi2</li>
+        </ul> -->
+    </ul>
+    <ul>
+        <li>one</li>
+    </ul>
+   
+    <script>
+        $(document).ready(function(){
+            $('ul li:first-child').css({"background":"red"});//first child including nested child
+            // $('ul li:last-child').css({"background":"yellow"});
+            // $("ul li:nth-child(2)").css({"background":"cyan"});
+            // $("ul li:nth-child(odd)").css({"color":"pink"});
+            // $("ul li:nth-child(even)").css({'color':"orange"});
+            $("ul li:nth-child(2n)").css({"background":"cyan"});//nth factor elem
+            $("ul li:only-child").css({"background":"pink"});//single elment child            
+
+
+
+        });
+    </script>
+</body>
+</html>

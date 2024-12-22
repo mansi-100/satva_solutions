@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first,last,index,filter</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<body>
+    <div class="d1">div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <script>
+        $(document).ready(function(){
+            $("div").first().css("background-color","red");
+            $("div").last().css("background-color","yellow");
+            $("div").eq(1).css("background-color","orange");
+            //or
+            // $("div:eq(1)").css({"background":"orange"});
+            $("div").filter(".d1").css("background-color","cyan"); //or
+            // $("p[class='d1']").css({"border":'solid blue'}); //having no class name mansi
+
+            $("div").not('.d1').css("border","solid blue 5px");
+
+        });
+    </script>
+</body>
+</html>

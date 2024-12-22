@@ -1,0 +1,58 @@
+<!--jquery interact dynamically ,animated effect,conditional statement support with css can't do-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selectors with jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<style>
+    #t1{
+        font-size: 80px;
+    }
+    .t2{
+        font-size: 30px;
+    }
+</style>
+<body>
+    <h2>hello i am h2 tag</h2>
+    <p class="t2">this is t2 class in p</p>
+    <p id="t1">this is id in p</p>
+    <p class="t2">this is t2 class in p again</p>
+    <h3>list of foods </h3>
+    <ul>
+        <li>vadapau</li>
+        <li>dabeli</li>
+        <li>bhajipau</li>
+        <li>pulav</li>
+        <ul>
+            <li>dhosa</li>
+            <li>idli</li>
+        </ul>
+        <li>again</li>
+    </ul>
+    <ol>
+        <li>red</li>
+        <li>green</li>
+        <li>blue</li>
+    </ol>
+
+    <script>
+        $(function(){
+            $("p").css("color","blue");
+            $("#t1").css({"color":"yellow"}); //only first id match will be considered(default behaviour of jquery)
+            $('.t2').css({"color":"orange"});//all elements having class t2(default behaviour of jquery)
+            $("ul li").css({"color":"aqua"});//this will consider all element includes nested
+            $("ul:first > li").css({ "color":"pink"})//only direct child of ul not nested ones
+            $("ul,ol").css({"color":"grey"})
+        });
+        // //or
+        // $(document).ready(function(){
+
+        // });
+    </script>
+</body>
+</html>

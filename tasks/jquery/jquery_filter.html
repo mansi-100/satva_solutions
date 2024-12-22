@@ -1,0 +1,48 @@
+<!--jquery interact dynamically ,animated effect with css can't do-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selectors with jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <h2>hello i am h2 tag</h2>
+    
+    <ul>
+        <li>vadapau</li>
+        <li>dabeli</li>
+        <li>bhajipau</li>
+        <li>pulav</li>
+        <li>non-veg</li>
+    </ul>
+    <ol>
+        <li>red</li>
+        <li>green</li>
+        <li>blue</li>
+    </ol>
+
+    <script>
+    //    $(function(){
+
+    //    });
+       //or
+       $(document).ready(function(){
+            // $("ul li:first").css({"background":"red"});
+            // $("ul li:last").css({"background":"green"});
+            // $("ul li:not(li:first,li:last)").css({"background":"pink"});
+            $("ul li:even").css({"background":"green"});
+            $("ul li:odd").css({"background":"pink"});
+            $("ul li:eq(1)").css({"background":"orange"});
+            $("ul li:gt(2)").css({"background":"red"});
+            $("ul li:lt(2)").css({"background":"yellow"});
+
+
+       });
+    </script>
+</body>
+</html>

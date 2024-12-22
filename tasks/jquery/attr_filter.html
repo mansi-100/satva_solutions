@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content based filter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h3 id="item1">content based filter</h3>
+    <p id="hello" value="hell">hello morning</p>
+    <p class="mansi">welcome to this amazing page</p>
+    <p>do you like blogging?</p>
+    <input type="text" id="hello" name="fname" placeholder="Enter name"><br>
+
+    <script>
+        $(document).ready(function(){
+            $("p[id]").css({"background":"red"}); //p tag having id 
+            //having id=hello           
+            // $("p[id='hello']").css({"background":"red"}); //p tag having id 
+
+            $("input[name]").css({"background":"pink"}); //having name
+            $("input[name='fname']").css({"border":"solid red"}); //having name=fname
+            
+            //class based
+            // $("p[class='mansi']").css({"background":"yellow"});//having class name mansi
+            $("p[class!='mansi']").css({"border":'solid blue'}); //having no class name mansi
+            // $("p[class^='ma']").css({"border":'solid orange'}); //class name starts with ma
+            $("p[class$='si']").css({"border":'solid orange'}); //class name ends with si
+            $("p[class*='n']").css({"background":"brown"});
+           
+        });
+    </script>
+</body>
+</html>

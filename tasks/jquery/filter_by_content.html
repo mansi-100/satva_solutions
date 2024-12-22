@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content based filter</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h3>content based filter</h3>
+    <p>hello morning</p>
+    <p>welcome to this amazing page</p>
+    <p>do you like blogging?</p>
+    <!-- <p></p> it will not work with p tag because it contains invisible whitespace or something-->
+    <ul>
+        <li>red</li>
+        <li>green</li>
+        <li></li>
+        <li><a href="#">hello</a></li>
+        <li><a href="#">wc</a></li>
+    </ul>
+    <table>
+        <tr>
+            <td>row1 col1</td>
+            <td>row2 col2</td>
+        </tr>
+        <tr>
+            <td>row2 col1</td>
+            <td>row2 col2</td>
+        </tr>
+    </table>
+    <script>
+        $(document).ready(function(){
+            $("p:contains(he)").css({"background":"red"});  
+            // $("p:empty").css({"background":"green"});
+            $("ul li:empty").css({"background":"yellow"});
+            $("ul li:has(a)").css({"background":"cyan"});
+            $("table tr td:parent").css({'background':'yellow'});
+        });
+    </script>
+</body>
+</html>
