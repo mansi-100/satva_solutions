@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery example2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#h").text("welcome new ");
+                alert($("#test").text());
+            });
+            $("#btn2").click(function(){
+                alert($("#test").html());
+                $("#h").html("<b> html new data</b>");
+            });
+            $("#btn3").click(function(){
+                alert($("input").val());
+                $("input").val("wc");
+            })
+            $("#btn4").click(function(){
+                // alert($("#myid").attr("href"));
+                $("#myid").attr({
+                    "href":'https://www.facebook.com',
+                    "title":"new link"
+                });
+            })
+            $("p").click(function(){
+                $(this).append(" mansi here");
+                var t1="<p>this is new1</p><br>";
+                var t2="<p>this is new2</p><br>";
+                $(this).prepend(t1,t2);
+                
+            });
+            $("img").click(function(){
+                $("img").before("<b>before txt</b>");
+                $("img").after("<b>after</b><br>");
+            });
+            $("img").toggle(function(){
+                $('img').remove();
+            });//comment this to see output
+
+        });
+    </script>
+</head>
+<body>
+    <p>this is p tag</p>
+    <img src="https://www.w3schools.com/images/w3jquery.gif" alt="no image found" width="100" height="200">
+    <a href="https://www.google.com" title="new" id="myid">link1</a>
+    <h2 id="h">welcome</h2>
+
+    name : <input type="text">
+    <p id="test">this is some <b>bold text</b> text </p>
+        <button id="btn1">show text</button>
+        <button id="btn2">show html</button>
+        <button id="btn3">show val</button>
+        <button id="btn4">show href</button>
+
+
+</body>
+</html>

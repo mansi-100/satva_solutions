@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                // $('button').click(function(){
+                //     $("p").hide();
+                // })
+                // $('button').click(function(){
+                //     $('#t').hide();
+                // });
+                $("button").click(function(){
+                    $(".t1").css("background-color","red");
+                })
+                $("button").click(function(){
+                    $(this).hide();
+                })
+                $("#b1").dblclick(function(){
+                    $(this).hide();
+                })
+                $(".t3").mouseenter(function(){
+                    alert("mouse entered");
+                })
+                $(".t3").mouseleave(function(){
+                    alert("mouse leave");
+                })
+                $(".t3").mousedown(function(){
+                    alert("mouse down");
+                })
+                $(".t3").mouseup(function(){
+                    alert("mouse up");
+                })
+                $(".t3").hover(function(){
+                    $('.t3').css('background-color','red'); 
+                })
+                $("input").focus(function(){
+                    $(this).css("background-color","yellow");
+                })
+                $("input").blur(function(){
+                    $(this).css("background-color","green");
+                })
+            });
+            $(document).ready(function()
+            {
+                $('#btn1').click(function(){
+                    $("#test1").text("changed text");
+                })
+                $("#btn2").click(function(){
+                    $("#test2").html("<b>hi</b>");
+                })
+                $("#btn3").click(function(){
+                    $("#test3").val("hello");
+                })
+
+            });
+    </script>
+</head>
+<body>
+    
+<p id="test1">This is a paragraph.</p>
+<p id="test2">This is another paragraph.</p>
+
+<p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+<button id="btn1">Set Text</button>
+<button id="btn2">Set HTML</button>
+<button id="btn3">Set Value</button>
+    <h2>this is headding</h2>
+    <p class="t1">this is another paragraph</p>
+    <p id="t">p with id</p>
+    <p class="t3">enter this paragraph</p>
+    <button>click me to hide paragraph</button>
+    Enter name : <input type="text">
+    <button id="b1">button2</button>
+    
+
+</body>
+</html>

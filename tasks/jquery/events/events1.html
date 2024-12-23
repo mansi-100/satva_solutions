@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input").blur(function(){
+                alert('this is lost focus');
+            });
+            // $("input").keydown(function(event){
+            //     alert('key '+event.which);
+            // });
+        });
+        $(document).ready(function(){
+            $("input").change(function(){
+                alert("text is changed");
+            })
+        });
+        $(document).ready(function(){
+            $("p").click(function(){
+                alert("clicked p");
+            })
+            
+            $("button").dblclick(function(){
+                alert("dble click");
+            });
+        });
+        $(document).ready(function(){
+            $("div").delegate("p","click",function(){
+                $("p").css("background-color","red");
+            });//trigger event on particular tag's inside tag
+        });
+        $(document).ready(function(){
+            $("h2").click(function(){
+                alert(event.currentTarget==this);//it refers current element
+            });
+        });
+        $(document).ready(function(){
+            $("h1").each(function(i){
+                $(this).on("click",{x:i},function(event){
+                    alert("the "+$(this).index()+"paragraph has data "+event.data.x);
+                })
+            });
+        });
+        $(document).ready(function(){
+            $("h4").on('click',function(event){
+                event.preventDefault();
+                alert("is this prevented"+event.isDefaultPrevented());
+                $(event.delegateTarget).css("background-color","red");
+            })
+            $("a").click(function(event){
+                event.preventDefault();
+                alert("is this prevented"+event.isDefaultPrevented());
+                event.stopImmediatePropagation();
+                alert('is this called ? '+event.isImmediatePropagationStopped());
+                event.isPropagationStopped();
+                alert("is propogation stopped"+event.isPropagationStopped())
+            });
+        });
+        $(document).ready(function(){
+            $(document).mousemove(function(event){
+                $('span').text('x : '+event.pageX+' y : '+event.pageY);
+            });
+        });
+        $(document).ready(function(){
+            $("#d").click(function(event){
+                event.preventDefault();
+            });
+            $("p,button,h1").click(function(){
+                $("div").html('triggered by '+event.target.nodeName+" "+event.timeStamp+" "+event.type);
+            });
+            $("input").focus(function(){
+                $("span").css('display',"inline").fadeOut(2000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>mouse position at  : <span></span></p>
+    <h1>h1 tag</h1>
+    <h1>h1 tag again</h1>
+    <h4>h4 tag</h4>
+    <a href="#">welcome</a>
+    <a id="d">wc2</a>
+    <div>
+        <p>this is p inside div</p>
+    </div>
+    <p>this is my paragraph</p>
+    <h2>welcome h2 tag</h2>
+    Enter name : <input type="text">
+    <span style="display: none;">nice to meet you</span>
+   <button type="submit">submit</button>
+
+   <h1>This is a heading</h1>
+
+   <p>This is a paragraph</p>
+   <button>This is a button</button>
+   <p>The heading, paragraph and button element have a click event defined. Click on each element to display which element triggered the event.</p>
+   <div style="color:blue;"></div>
+   
+</body>
+</html>
